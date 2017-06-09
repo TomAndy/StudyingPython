@@ -6,7 +6,7 @@ path_to_images = "d:/images/"
 path_converted_images = "d:/images_black/"
 
 
-def read_image_files():
+def read_image_files(path_to_images):
     imagelist = []
     for filelist in os.listdir(path_to_images):
         imagelist.append(filelist)
@@ -28,6 +28,6 @@ def clear_folder(path):
 
 
 if __name__ == '__main__':
-    list_of_images = read_image_files()
+    list_of_images = read_image_files(path_to_images)
     clear_folder(path_converted_images)
     convert_images(list_of_images, path_converted_images)
